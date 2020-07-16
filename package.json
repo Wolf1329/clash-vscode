@@ -1,9 +1,9 @@
 {
     "name": "clash-vscode",
-    "displayName": "Clash Vscode Snippets",
+    "displayName": "Clash VSCode Snippets",
     "author": "Fndroid",
     "description": "",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "Fndroid",
     "repository": "https://github.com/Fndroid/clash-vscode",
     "engines": {

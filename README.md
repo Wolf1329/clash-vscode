@@ -17,8 +17,7 @@
     | socks | create a SOCKS5 server |
     | vmess,vmess-ws,vmess-http | create a Vmess server |
     | snell | create a Snell server |
-    | trojan | create a Trojan server |   
-    | - | - |
+    | trojan | create a Trojan server |
 
     create a group:
 
