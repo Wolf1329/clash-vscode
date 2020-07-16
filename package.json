@@ -3,7 +3,9 @@
     "displayName": "Clash",
     "author": "Fndroid",
     "description": "",
-    "version": "0.0.1",
+    "version": "1.0.0",
+    "publisher": "Fndroid",
+    "repository": "https://github.com/Fndroid/clash-vscode",
     "engines": {
         "vscode": "^1.47.0"
     },
