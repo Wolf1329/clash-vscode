@@ -1,0 +1,41 @@
+{
+    "name": "clash-vscode",
+    "displayName": "Clash",
+    "author": "Fndroid",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "yaml",
+                "path": "./snippets/top.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/servers.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/groups.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/server-providers.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/rule-providers.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/premium.code-snippets"
+            }
+        ]
+    }
+}

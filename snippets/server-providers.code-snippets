@@ -1,0 +1,27 @@
+{
+  "File proxy provider": {
+    "prefix": "proxy-provider-file",
+    "body": [
+      "${1:name}:",
+      "\ttype: file",
+      "\tpath: ${2:path}",
+      "\thealth-check:",
+      "\t\tenable: ${3|true,false|}",
+      "\t\tinterval: ${4:36000}",
+      "\t\turl: ${5:http://www.gstatic.com/generate_204}"
+    ]
+  },
+  "Http proxy provider": {
+    "prefix": "proxy-provider-http",
+    "body": [
+      "${1:name}:",
+      "\ttype: http",
+      "\turl: ${2:url}",
+      "\tpath: ${3:path}",
+      "\thealth-check:",
+      "\t\tenable: ${4|true,false|}",
+      "\t\tinterval: ${5:36000}",
+      "\t\turl: ${6:http://www.gstatic.com/generate_204}"
+    ]
+  }
+}

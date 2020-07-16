@@ -1,0 +1,22 @@
+{
+  "File rule provider": {
+    "prefix": "rule-provider-file",
+    "body": [
+      "${1:name}:",
+      "\tbehavior: ${2|domain,classical,ipcidr|}",
+      "\ttype: file",
+      "\tpath: ${3:path}"
+    ]
+  },
+  "Http rule provider": {
+    "prefix": "rule-provider-http",
+    "body": [
+      "${1:name}:",
+      "\tbehavior: ${2|domain,classical,ipcidr|}",
+      "\ttype: http",
+      "\turl: ${3:url}",
+      "\tinterval: ${4:3600}",
+      "\tpath: ${5:path}"
+    ]
+  }
+}
