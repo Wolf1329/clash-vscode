@@ -18,10 +18,11 @@
       "\ttype: http",
       "\turl: ${2:url}",
       "\tpath: ${3:path}",
+      "\tinterval: ${4:86400}",
       "\thealth-check:",
-      "\t\tenable: ${4|true,false|}",
-      "\t\tinterval: ${5:36000}",
-      "\t\turl: ${6:http://www.gstatic.com/generate_204}"
+      "\t\tenable: ${5|true,false|}",
+      "\t\tinterval: ${6:600}",
+      "\t\turl: ${7:http://www.gstatic.com/generate_204}"
     ]
   }
 }
