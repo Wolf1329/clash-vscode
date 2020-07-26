@@ -46,6 +46,22 @@
       "\tpath: ${10:\"\/\"}"
     ]
   },
+  "ShadowsocksR server": {
+    "prefix": "ssr",
+    "body": [
+      "name: \"${1:name}\"",
+      "type: ssr",
+      "server: ${2:server}",
+      "port: ${3:port}",
+      "cipher: ${4|aes-128-gcm,aes-192-gcm,aes-256-gcm,aes-128-cfb,aes-192-cfb,aes-256-cfb,aes-128-ctr,aes-192-ctr,aes-256-ctr,rc4-md5,chacha20-ietf,xchacha20,chacha20-ietf-poly1305,xchacha20-ietf-poly1305|}",
+      "password: ${5:password}",
+      "udp: ${6|true,false|}",
+      "obfs: ${7|plain,http_simple,http_post,random_head,tls1.2_ticket_auth,tls1.2_ticket_fastauth|}",
+      "protocol: ${8|origin,auth_sha1_v4,auth_aes128_md5,auth_aes128_sha1,auth_chain_a,auth_chain_b|}",
+      "# obfs-param: domain.tld",
+      "# protocol-param: \"#\""
+    ]
+  },
   "Vmess server": {
     "prefix": "vmess",
     "body": [
@@ -157,5 +173,5 @@
       "\t- ${7:h2}",
       "skip-cert-verify: ${7|true,false|}"
     ]
-  },
+  }
 }
