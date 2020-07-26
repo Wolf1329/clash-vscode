@@ -36,6 +36,10 @@
             },
             {
                 "language": "yaml",
+                "path": "./snippets/rule.code-snippets"
+            },
+            {
+                "language": "yaml",
                 "path": "./snippets/premium.code-snippets"
             }
         ]

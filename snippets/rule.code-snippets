@@ -1,0 +1,46 @@
+{
+  "Domain": {
+    "prefix": "domain",
+    "body": "DOMAIN,${1:payload},${2:policy}$0"
+  },
+  "Domain Suffix": {
+    "prefix": "domain-suffix",
+    "body": "DOMAIN-SUFFIX,${1:payload},${2:policy}$0"
+  },
+  "Domain Keyword": {
+    "prefix": "domain-keyword",
+    "body": "DOMAIN-KEYWORD,${1:payload},${2:policy}$0"
+  },
+  "IP CIDR": {
+    "prefix": "ip-cidr",
+    "body": "IP-CIDR,${1:payload},${2:policy}$0"
+  },
+  "SRC IP CIDR": {
+    "prefix": "src-ip-cidr",
+    "body": "SRC-IP-CIDR,${1:payload},${2:policy}$0"
+  },
+  "GeoIP": {
+    "prefix": "geoip",
+    "body": "GEOIP,${1:payload},${2:policy}$0"
+  },
+  "DST port": {
+    "prefix": "dst-port",
+    "body": "DST-PORT,${1:payload},${2:policy}$0"
+  },
+  "SRC port": {
+    "prefix": "src-port",
+    "body": "SRC-PORT,${1:payload},${2:policy}$0"
+  },
+  "Rule set": {
+    "prefix": "rule-set",
+    "body": "RULE-SET,${1:payload},${2:policy}$0"
+  },
+  "Match": {
+    "prefix": "match",
+    "body": "MATCH,${1:policy}$0"
+  },
+  "Process": {
+    "prefix": "process-name",
+    "body": "PROCESS-NAME,${1:payload},${2:policy}$0"
+  }
+}
