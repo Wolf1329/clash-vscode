@@ -3,7 +3,7 @@
     "displayName": "Clash VSCode Snippets",
     "author": "Fndroid",
     "description": "",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "Fndroid",
     "repository": "https://github.com/Fndroid/clash-vscode",
     "engines": {
@@ -20,15 +20,15 @@
             },
             {
                 "language": "yaml",
-                "path": "./snippets/servers.code-snippets"
+                "path": "./snippets/proxies.code-snippets"
             },
             {
                 "language": "yaml",
-                "path": "./snippets/groups.code-snippets"
+                "path": "./snippets/proxy-groups.code-snippets"
             },
             {
                 "language": "yaml",
-                "path": "./snippets/server-providers.code-snippets"
+                "path": "./snippets/proxy-providers.code-snippets"
             },
             {
                 "language": "yaml",
@@ -36,11 +36,7 @@
             },
             {
                 "language": "yaml",
-                "path": "./snippets/rule.code-snippets"
-            },
-            {
-                "language": "yaml",
-                "path": "./snippets/premium.code-snippets"
+                "path": "./snippets/rules.code-snippets"
             }
         ]
     },

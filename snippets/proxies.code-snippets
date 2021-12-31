@@ -1,0 +1,177 @@
+{
+  "Shadowsocks server": {
+    "prefix": "ss",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: ss",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tcipher: ${4|aes-128-gcm,aes-192-gcm,aes-256-gcm,aes-128-cfb,aes-192-cfb,aes-256-cfb,aes-128-ctr,aes-192-ctr,aes-256-ctr,rc4-md5,chacha20-ietf,xchacha20,chacha20-ietf-poly1305,xchacha20-ietf-poly1305|}",
+      "\tpassword: \"${5:password}\"",
+      "\tudp: ${6|true,false|}"
+    ]
+  },
+  "Shadowsocks obfs server": {
+    "prefix": "ss-obfs",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: ss",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tcipher: ${4|aes-128-gcm,aes-192-gcm,aes-256-gcm,aes-128-cfb,aes-192-cfb,aes-256-cfb,aes-128-ctr,aes-192-ctr,aes-256-ctr,rc4-md5,chacha20-ietf,xchacha20,chacha20-ietf-poly1305,xchacha20-ietf-poly1305|}",
+      "\tpassword: \"${5:password}\"",
+      "\tudp: ${6|true,false|}",
+      "\tplugin: obfs",
+      "\tplugin-opts:",
+      "\t\tmode: ${7|tls,http|}",
+      "\t\thost: ${8:bing.com}"
+    ]
+  },
+  "Shadowsocks v2ray-plugin server": {
+    "prefix": "ss-v2ray-plugin",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: ss",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tcipher: ${4|aes-128-gcm,aes-192-gcm,aes-256-gcm,aes-128-cfb,aes-192-cfb,aes-256-cfb,aes-128-ctr,aes-192-ctr,aes-256-ctr,rc4-md5,chacha20-ietf,xchacha20,chacha20-ietf-poly1305,xchacha20-ietf-poly1305|}",
+      "\tpassword: \"${5:password}\"",
+      "\tudp: ${6|true,false|}",
+      "\tplugin: v2ray-plugin",
+      "\tplugin-opts:",
+      "\t\tmode: websocket",
+      "\t\ttls: ${7|true,false|}",
+      "\t\tskip-cert-verify: ${8|true,false|}",
+      "\t\thost: ${9:bing.com}",
+      "\t\tpath: ${10:\"/\"}"
+    ]
+  },
+  "ShadowsocksR server": {
+    "prefix": "ssr",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: ssr",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tcipher: ${4|aes-128-gcm,aes-192-gcm,aes-256-gcm,aes-128-cfb,aes-192-cfb,aes-256-cfb,aes-128-ctr,aes-192-ctr,aes-256-ctr,rc4-md5,chacha20-ietf,xchacha20,chacha20-ietf-poly1305,xchacha20-ietf-poly1305|}",
+      "\tpassword: ${5:password}",
+      "\tudp: ${6|true,false|}",
+      "\tobfs: ${7|plain,http_simple,http_post,random_head,tls1.2_ticket_auth,tls1.2_ticket_fastauth|}",
+      "\tprotocol: ${8|origin,auth_sha1_v4,auth_aes128_md5,auth_aes128_sha1,auth_chain_a,auth_chain_b|}",
+      "\t# obfs-param: domain.tld",
+      "\t# protocol-param: \"#\""
+    ]
+  },
+  "Vmess server": {
+    "prefix": "vmess",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: vmess",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tuuid: ${4:uuid}",
+      "\talterId: ${5:alterId}",
+      "\tcipher: ${6|auto,aes-128-gcm,chacha20-poly1305,none|}",
+      "\tudp: ${7|true,false|}",
+      "\ttls: ${8|true,false|}",
+      "\tskip-cert-verify: ${9|true,false|}",
+      "\tservername: ${10:servername}"
+    ]
+  },
+  "Vmess ws server": {
+    "prefix": "vmess-ws",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: vmess",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tuuid: ${4:uuid}",
+      "\talterId: ${5:alterId}",
+      "\tcipher: ${6|auto,aes-128-gcm,chacha20-poly1305,none|}",
+      "\tudp: ${7|true,false|}",
+      "\ttls: ${8|true,false|}",
+      "\tskip-cert-verify: ${9|true,false|}",
+      "\tservername: ${10:servername}",
+      "\tnetwork: ws",
+      "\tws-path: ${11:/path}",
+      "\tws-headers:",
+      "\t\tHost: ${12:v2ray.com}"
+    ]
+  },
+  "Vmess http server": {
+    "prefix": "vmess-http",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: vmess",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tuuid: ${4:uuid}",
+      "\talterId: ${5:alterId}",
+      "\tcipher: ${6|auto,aes-128-gcm,chacha20-poly1305,none|}",
+      "\tudp: ${7|true,false|}",
+      "\tnetwork: http",
+      "\thttp-opts:",
+      "\t\tmethod: ${8:\"GET\"}",
+      "\t\tpath:",
+      "\t\t\t- ${9:'/'}",
+      "\t\theaders:",
+      "\t\t\tConnection:",
+      "\t\t\t\t- ${10:keep-alive}"
+    ]
+  },
+  "Socks5 server": {
+    "prefix": "socks",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: socks5",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tusername: ${4:username}",
+      "\tpassword: \"${5:password}\"",
+      "\ttls: ${6|true,false|}",
+      "\tskip-cert-verify: ${7|true,false|}",
+      "\tudp: ${8|true,false|}"
+    ]
+  },
+  "Http server": {
+    "prefix": "http",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: http",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tusername: ${4:username}",
+      "\tpassword: \"${5:password}\"",
+      "\ttls: ${6|true,false|}",
+      "\tskip-cert-verify: ${7|true,false|}"
+    ]
+  },
+  "Snell server": {
+    "prefix": "snell",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: snell",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tpsk: ${4:psk}",
+      "\tobfs-opts:",
+      "\t\tmode: ${5|http,tls|}",
+      "\t\thost: ${6:bing.com}"
+    ]
+  },
+  "Trojan server": {
+    "prefix": "trojan",
+    "body": [
+      "name: \"${1:name}\"",
+      "\ttype: trojan",
+      "\tserver: ${2:server}",
+      "\tport: ${3:port}",
+      "\tpassword: \"${4:password}\"",
+      "\tudp: ${5|true,false|}",
+      "\tsni: ${6:example.com}",
+      "\talpn:",
+      "\t\t- ${7:h2}",
+      "\tskip-cert-verify: ${7|true,false|}"
+    ]
+  }
+}

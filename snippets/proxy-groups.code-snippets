@@ -1,0 +1,63 @@
+{
+  "Select group": {
+    "prefix": "select",
+    "body": [
+      "name: ${1:name}",
+      "\ttype: select",
+      "\tproxies:",
+      "\t- ${2:DIRECT}"
+    ]
+  },
+  "Select provider group": {
+    "prefix": "select-provider",
+    "body": ["name: ${1:name}", "\ttype: select", "\tuse:", "\t\t- ${2:DIRECT}"]
+  },
+  "Fallback group": {
+    "prefix": "fallback",
+    "body": [
+      "name: ${1:name}",
+      "\ttype: fallback",
+      "\turl: ${2:'http://www.gstatic.com/generate_204'}",
+      "\tinterval: ${3:300}",
+      "\tproxies:",
+      "\t\t- ${4:DIRECT}"
+    ]
+  },
+  "Fallback provider group": {
+    "prefix": "fallback-provider",
+    "body": [
+      "name: ${1:name}",
+      "\ttype: fallback",
+      "\turl: ${2:'http://www.gstatic.com/generate_204'}",
+      "\tinterval: ${3:300}",
+      "\tuse:",
+      "\t\t- ${4:DIRECT}"
+    ]
+  },
+  "Urltest group": {
+    "prefix": "url-test",
+    "body": [
+      "name: ${1:name}",
+      "\ttype: url-test",
+      "\turl: ${2:'http://www.gstatic.com/generate_204'}",
+      "\tinterval: ${3:300}",
+      "\tproxies:",
+      "\t\t- ${4:DIRECT}"
+    ]
+  },
+  "Urltest provider group": {
+    "prefix": "url-test-provider",
+    "body": [
+      "name: ${1:name}",
+      "\ttype: url-test",
+      "\turl: ${2:'http://www.gstatic.com/generate_204'}",
+      "\tinterval: ${3:300}",
+      "\tuse:",
+      "\t\t- ${4:DIRECT}"
+    ]
+  },
+  "Relay group": {
+    "prefix": "relay",
+    "body": ["name: ${1:name}", "\ttype: relay", "\tproxies:", "\t\t- ${0}"]
+  }
+}

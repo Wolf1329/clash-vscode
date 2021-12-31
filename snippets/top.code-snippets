@@ -42,31 +42,32 @@
   "DNS": {
     "prefix": "dns",
     "body": [
-      "enable: ${1|true,false|}",
-      "listen: ${2::53}",
-      "enhanced-mode: ${3|redir-host,fake-ip|}",
-      "nameserver:",
-      "\t- ${4:114.114.114.114}",
-      "$LINE_COMMENT fallback",
-      "$LINE_COMMENT \t- tcp://1.1.1.1",
-      "$LINE_COMMENT default-nameserver:",
-      "$LINE_COMMENT \t- 114.114.114.114",
-      "$LINE_COMMENT fake-ip-range: 198.18.0.1/16",
-      "$LINE_COMMENT fake-ip-filter:",
-      "$LINE_COMMENT \t- '*.lan'",
-      "$LINE_COMMENT fallback-filter:",
-      "$LINE_COMMENT \tgeoip: true",
-      "$LINE_COMMENT \tipcidr:",
-      "$LINE_COMMENT \t\t- 240.0.0.0/4"
+      "dns:",
+      "\tenable: ${1|true,false|}",
+      "\tlisten: ${2::53}",
+      "\tenhanced-mode: ${3|redir-host,fake-ip|}",
+      "\tnameserver:",
+      "\t\t- ${4:114.114.114.114}",
+      "\t$LINE_COMMENT fallback:",
+      "\t$LINE_COMMENT \t- tcp://1.1.1.1",
+      "\t$LINE_COMMENT default-nameserver:",
+      "\t$LINE_COMMENT \t- 114.114.114.114",
+      "\t$LINE_COMMENT fake-ip-range: 198.18.0.1/16",
+      "\t$LINE_COMMENT fake-ip-filter:",
+      "\t$LINE_COMMENT \t- '*.lan'",
+      "\t$LINE_COMMENT fallback-filter:",
+      "\t$LINE_COMMENT \tgeoip: true",
+      "\t$LINE_COMMENT \tipcidr:",
+      "\t$LINE_COMMENT \t\t- 240.0.0.0/4"
     ]
   },
   "Proxies": {
     "prefix": "proxies",
-    "body": ["proxies:", "\t-", "\t\t"]
+    "body": ["proxies:", "\t- ${0}"]
   },
   "Proxy Groups": {
     "prefix": "proxy-groups",
-    "body": ["proxy-groups:", "\t-", "\t\t"]
+    "body": ["proxy-groups:", "\t- ${0}"]
   },
   "Rules": {
     "prefix": "rules",
@@ -87,5 +88,17 @@
   "Hosts": {
     "prefix": "hosts",
     "body": ["hosts:", "\t'${1:localhost}': ${2:127.0.0.1}"]
+  },
+  "Tun": {
+    "prefix": "tun",
+    "body": [
+      "tun:",
+      "\tenable: ${1|true,false|}",
+      "\tstack: ${2|system,gvisor|}",
+      "\t$LINE_COMMENT \tdns-hijack:",
+      "\t$LINE_COMMENT \t\t- 8.8.8.8:53",
+      "\t$LINE_COMMENT macOS-auto-route: true",
+      "\t$LINE_COMMENT macOS-auto-detect-interface: true"
+    ]
   }
 }
