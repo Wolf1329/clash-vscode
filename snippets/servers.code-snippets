@@ -8,7 +8,7 @@
       "port: ${3:port}",
       "cipher: ${4|aes-128-gcm,aes-192-gcm,aes-256-gcm,aes-128-cfb,aes-192-cfb,aes-256-cfb,aes-128-ctr,aes-192-ctr,aes-256-ctr,rc4-md5,chacha20-ietf,xchacha20,chacha20-ietf-poly1305,xchacha20-ietf-poly1305|}",
       "password: \"${5:password}\"",
-      "udp: ${6|true,false|}",
+      "udp: ${6|true,false|}"
     ]
   },
   "Shadowsocks obfs server": {
@@ -43,7 +43,7 @@
       "\ttls: ${7|true,false|}",
       "\tskip-cert-verify: ${8|true,false|}",
       "\thost: ${9:bing.com}",
-      "\tpath: ${10:\"\/\"}"
+      "\tpath: ${10:\"/\"}"
     ]
   },
   "ShadowsocksR server": {
@@ -130,7 +130,7 @@
       "password: \"${5:password}\"",
       "tls: ${6|true,false|}",
       "skip-cert-verify: ${7|true,false|}",
-      "udp: ${8|true,false|}",
+      "udp: ${8|true,false|}"
     ]
   },
   "Http server": {
@@ -143,7 +143,7 @@
       "username: ${4:username}",
       "password: \"${5:password}\"",
       "tls: ${6|true,false|}",
-      "skip-cert-verify: ${7|true,false|}",
+      "skip-cert-verify: ${7|true,false|}"
     ]
   },
   "Snell server": {

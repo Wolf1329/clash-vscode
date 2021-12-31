@@ -62,54 +62,30 @@
   },
   "Proxies": {
     "prefix": "proxies",
-    "body": [
-      "proxies:",
-      "\t-",
-      "\t\t"
-    ]
+    "body": ["proxies:", "\t-", "\t\t"]
   },
   "Proxy Groups": {
     "prefix": "proxy-groups",
-    "body": [
-      "proxy-groups:",
-      "\t-",
-      "\t\t"
-    ]
+    "body": ["proxy-groups:", "\t-", "\t\t"]
   },
   "Rules": {
     "prefix": "rules",
-    "body": [
-      "rules:",
-      "\t- ${0}"
-    ]
+    "body": ["rules:", "\t- ${0}"]
   },
   "Proxy providers": {
     "prefix": "proxy-providers",
-    "body": [
-      "proxy-providers:",
-      "\t${0}"
-    ]
+    "body": ["proxy-providers:", "\t${0}"]
   },
   "Rule providers": {
     "prefix": "rule-providers",
-    "body": [
-      "rule-providers:",
-      "\t${0}"
-    ]
+    "body": ["rule-providers:", "\t${0}"]
   },
   "Script": {
     "prefix": "script",
-    "body": [
-      "script:",
-      "\tcode: |",
-      "\t\t${0}"
-    ]
+    "body": ["script:", "\tcode: |", "\t\t${0}"]
   },
   "Hosts": {
     "prefix": "hosts",
-    "body": [
-      "hosts:",
-      "\t'${1:localhost}': ${2:127.0.0.1}"
-    ]
+    "body": ["hosts:", "\t'${1:localhost}': ${2:127.0.0.1}"]
   }
 }

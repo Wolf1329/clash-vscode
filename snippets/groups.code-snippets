@@ -1,21 +1,11 @@
 {
   "Select group": {
     "prefix": "select",
-    "body": [
-      "name: ${1:name}",
-      "type: select",
-      "proxies:",
-      "\t- ${2:DIRECT}"
-    ]
+    "body": ["name: ${1:name}", "type: select", "proxies:", "\t- ${2:DIRECT}"]
   },
   "Select provider group": {
     "prefix": "select-provider",
-    "body": [
-      "name: ${1:name}",
-      "type: select",
-      "use:",
-      "\t- ${2:DIRECT}"
-    ]
+    "body": ["name: ${1:name}", "type: select", "use:", "\t- ${2:DIRECT}"]
   },
   "Fallback group": {
     "prefix": "fallback",
@@ -63,11 +53,6 @@
   },
   "Relay group": {
     "prefix": "relay",
-    "body": [
-      "name: ${1:name}",
-      "type: relay",
-      "proxies:",
-      "\t- ${0}"
-    ]
+    "body": ["name: ${1:name}", "type: relay", "proxies:", "\t- ${0}"]
   }
 }
