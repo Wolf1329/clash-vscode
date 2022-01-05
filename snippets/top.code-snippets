@@ -44,8 +44,8 @@
     "body": [
       "dns:",
       "\tenable: ${1|true,false|}",
-      "\tlisten: ${2::53}",
-      "\tenhanced-mode: ${3|redir-host,fake-ip|}",
+      "\t$LINE_COMMENT listen: ${2::53}",
+      "\tenhanced-mode: ${3|fake-ip,redir-host|}",
       "\tnameserver:",
       "\t\t- ${4:114.114.114.114}",
       "\t$LINE_COMMENT fallback:",
@@ -58,7 +58,9 @@
       "\t$LINE_COMMENT fallback-filter:",
       "\t$LINE_COMMENT \tgeoip: true",
       "\t$LINE_COMMENT \tipcidr:",
-      "\t$LINE_COMMENT \t\t- 240.0.0.0/4"
+      "\t$LINE_COMMENT \t\t- 240.0.0.0/4",
+      "\t$LINE_COMMENT nameserver-policy:",
+      "\t$LINE_COMMENT \t- 'www.baidu.com': '114.114.114.114'"
     ]
   },
   "Proxies": {
@@ -97,8 +99,16 @@
       "\tstack: ${2|system,gvisor|}",
       "\t$LINE_COMMENT \tdns-hijack:",
       "\t$LINE_COMMENT \t\t- 8.8.8.8:53",
-      "\t$LINE_COMMENT macOS-auto-route: true",
-      "\t$LINE_COMMENT macOS-auto-detect-interface: true"
+      "\t$LINE_COMMENT auto-route: true",
+      "\t$LINE_COMMENT auto-detect-interface: true"
+    ]
+  },
+  "Profile": {
+    "prefix": "profile",
+    "body": [
+      "profile:",
+      "\tstore-selected: ${1|true,false|}",
+      "\tstore-fake-ip: ${2|true,false|}"
     ]
   }
 }
