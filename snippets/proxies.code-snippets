@@ -93,9 +93,12 @@
       "\tskip-cert-verify: ${9|true,false|}",
       "\tservername: ${10:servername}",
       "\tnetwork: ws",
-      "\tws-path: ${11:/path}",
-      "\tws-headers:",
-      "\t\tHost: ${12:v2ray.com}"
+      "\tws-opts:",
+      "\t\tpath: ${11:/path}",
+      "\t\theaders:",
+      "\t\t\tHost: ${12:v2ray.com}",
+      "\t\tmax-early-data: ${13:2048}",
+      "\t\tearly-data-header-name: ${14:Sec-WebSocket-Protocol}"
     ]
   },
   "Vmess http server": {
